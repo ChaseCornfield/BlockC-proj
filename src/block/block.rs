@@ -28,17 +28,17 @@ use crate::transactions::transactions::Transaction;
 /// - All transaction data (sender, receiver, amount, timestamp)
 pub struct Block{
 
-    block_hash: String,
-    previous_block_hash: String,
-    transaction: Vec<Transaction>,
-    time_stamp: u32, // small because of project size, good until 2106
-    nonce: u32,
+    pub block_hash: String,
+    pub previous_block_hash: String,
+    pub transaction: Vec<Transaction>,
+    pub time_stamp: u32, // small because of project size, good until 2106
+    pub nonce: u32,
 
 }
 
 
 impl Block{
-    fn new(transaction: Vec<Transaction>, previous_block_hash: String) -> Self
+    pub fn new(transaction: Vec<Transaction>, previous_block_hash: String) -> Self
     {
         let time_stamp = helpers::helper_functions::get_time();
         let nonce = 0;

@@ -44,7 +44,20 @@ pub struct Entity{
 
 
 impl Entity{
-    fn new(address: String, balance: f64, history: Vec<Transaction>, public_key: String, private_key: String) -> Self{
+    /// Creates a new Entity with the specified parameters.
+    /// 
+    /// # Arguments
+    /// 
+    /// * `address` - Unique identifier for this entity
+    /// * `balance` - Initial balance for this entity
+    /// * `history` - Initial transaction history (usually empty Vec)
+    /// * `public_key` - Public key for transaction verification
+    /// * `private_key` - Private key for signing transactions
+    /// 
+    /// # Returns
+    /// 
+    /// A new `Entity` instance.
+    pub fn new(address: String, balance: f64, history: Vec<Transaction>, public_key: String, private_key: String) -> Self{
         Entity{
             address: address,
             balance: balance,
